@@ -135,7 +135,7 @@ const onFileUploadSuccess = (res) => {
 emailForm.addEventListener("submit", (e) => {
   e.preventDefault(); // stop submission
 
-  disable the button
+  //disable the button
   emailForm[2].setAttribute("disabled", "true");
   emailForm[2].innerText = "Sending";
 
