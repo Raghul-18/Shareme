@@ -122,7 +122,7 @@ const onFileUploadSuccess = (res) => {
   status.innerText = "Uploaded";
 
   // remove the disabled attribute from form btn & make text send
-  emailForm[2].removeAttribute("disabled");
+  emailForm[2].removeAttribute("disabled, true");
   emailForm[2].innerText = "Send";
   progressContainer.style.display = "none"; // hide the box
 
