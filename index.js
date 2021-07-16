@@ -47,7 +47,7 @@ dropZone.addEventListener("dragover", (e) => {
   e.preventDefault();
   dropZone.classList.add("dragged");
 
-  // console.log("dropping file");
+  console.log("dropping file");
 });
 
 dropZone.addEventListener("dragleave", (e) => {
@@ -135,7 +135,7 @@ const onFileUploadSuccess = (res) => {
 emailForm.addEventListener("submit", (e) => {
   e.preventDefault(); // stop submission
 
-  // disable the button
+  //disable the button
   //emailForm[2].setAttribute("disabled", "true");
   //emailForm[2].innerText = "Sending";
 
