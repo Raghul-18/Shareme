@@ -28,7 +28,7 @@ browseBtn.addEventListener("click", () => {
 
 dropZone.addEventListener("drop", (e) => {
   e.preventDefault();
-     console.log("dropped", e.dataTransfer.files[0].name);
+  //   console.log("dropped", e.dataTransfer.files[0].name);
   const files = e.dataTransfer.files;
   if (files.length === 1) {
     if (files[0].size < maxAllowedSize) {
@@ -47,7 +47,7 @@ dropZone.addEventListener("dragover", (e) => {
   e.preventDefault();
   dropZone.classList.add("dragged");
 
-  console.log("dropping file");
+  // console.log("dropping file");
 });
 
 dropZone.addEventListener("dragleave", (e) => {
@@ -122,7 +122,7 @@ const onFileUploadSuccess = (res) => {
   status.innerText = "Uploaded";
 
   // remove the disabled attribute from form btn & make text send
-  emailForm[2].removeAttribute("disabled, true");
+  emailForm[2].removeAttribute("disabled");
   emailForm[2].innerText = "Send";
   progressContainer.style.display = "none"; // hide the box
 
@@ -132,10 +132,10 @@ const onFileUploadSuccess = (res) => {
   fileURL.value = url;
 };
 
-  emailForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // stop submission
+emailForm.addEventListener("submit", (e) => {
+  e.preventDefault(); // stop submission
 
-  //disable the button
+  // disable the button
   emailForm[2].setAttribute("disabled", "true");
   emailForm[2].innerText = "Sending";
 
@@ -151,7 +151,7 @@ const onFileUploadSuccess = (res) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-  },
+    },
     body: JSON.stringify(formData),
   })
     .then((res) => res.json())
