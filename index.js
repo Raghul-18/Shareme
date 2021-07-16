@@ -11,13 +11,13 @@ const status = document.querySelector(".status");
 const sharingContainer = document.querySelector(".sharing-container");
 const copyURLBtn = document.querySelector("#copyURLBtn");
 const fileURL = document.querySelector("#fileURL");
-const emailForm = document.querySelector("#emailForm");
+//const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
 const baseURL = "https://we-share-file-transfer.herokuapp.com";
 const uploadURL = `${baseURL}/files/api`;
-const emailURL = `${baseURL}/api/files/send`;
+//const emailURL = `${baseURL}/api/files/send`;
 
 const maxAllowedSize = 100 * 1024 * 1024; //100mb
 
@@ -136,21 +136,21 @@ emailForm.addEventListener("submit", (e) => {
   e.preventDefault(); // stop submission
 
   // disable the button
-  emailForm[2].setAttribute("disabled", "true");
-  emailForm[2].innerText = "Sending";
+  //emailForm[2].setAttribute("disabled", "true");
+  //emailForm[2].innerText = "Sending";
 
   const url = fileURL.value;
 
-  const formData = {
-    uuid: url.split("/").splice(-1, 1)[0],
-    emailTo: emailForm.elements["to-email"].value,
-    emailFrom: emailForm.elements["from-email"].value,
+  //const formData = {
+    //uuid: url.split("/").splice(-1, 1)[0],
+    //emailTo: emailForm.elements["to-email"].value,
+    //emailFrom: emailForm.elements["from-email"].value,
   };
-  console.log(formData);
-  fetch(emailURL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  //console.log(formData);
+  //fetch(emailURL, {
+  //  method: "POST",
+  //  headers: {
+   //   "Content-Type": "application/json",
     },
     body: JSON.stringify(formData),
   })
