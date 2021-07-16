@@ -132,7 +132,7 @@ const onFileUploadSuccess = (res) => {
   fileURL.value = url;
 };
 
-//emailForm.addEventListener("submit", (e) => {
+/*emailForm.addEventListener("submit", (e) => {
 //  e.preventDefault(); // stop submission
 
   // disable the button
@@ -161,7 +161,7 @@ const onFileUploadSuccess = (res) => {
         sharingContainer.style.display = "none"; // hide the box
       }
     });
-//});
+});*/
 
 let toastTimer;
 // the toast function
