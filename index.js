@@ -11,7 +11,7 @@ const status = document.querySelector(".status");
 const sharingContainer = document.querySelector(".sharing-container");
 const copyURLBtn = document.querySelector("#copyURLBtn");
 const fileURL = document.querySelector("#fileURL");
-const emailForm = document.querySelector("#emailForm");
+//const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
