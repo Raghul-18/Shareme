@@ -161,7 +161,7 @@ const onFileUploadSuccess = (res) => {
         sharingContainer.style.display = "none"; // hide the box
       }
     });
-});
+//});
 
 let toastTimer;
 // the toast function
